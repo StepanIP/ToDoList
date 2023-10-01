@@ -1,0 +1,9 @@
+.container {
+    width: 75%;
+}
+
+.disabled-link {
+    color: gray;
+    pointer-events: none;
+    cursor: default;
+}

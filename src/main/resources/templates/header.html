@@ -1,0 +1,20 @@
+<!-- header.html -->
+<div xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" th:href="@{/}">TODOs List</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{'/todos/all/users/' + ${#authentication.getPrincipal().getId()}}">My Todos</a></li>
+                <li sec:authorize="hasRole('ADMIN')"><a th:href="@{/users/all}">List of users</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" th:action="@{/logout}" method="post">
+                <div class="form-group">
+                    <label>Hello, <a th:href="@{'/todos/all/users/' + ${#authentication.getPrincipal().getId()}}" th:text="${#authentication.getPrincipal().getFirstName()}"></a>!</label>
+                    <input class="btn btn-info" type="submit" value="Sign Out"/>
+                </div>
+            </form>
+        </div>
+    </nav>
+</div>
