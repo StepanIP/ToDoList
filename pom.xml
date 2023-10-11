@@ -12,7 +12,7 @@
 
     <groupId>com.to.do</groupId>
     <artifactId>todolist</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>2-RELEASE</version>
     <name>ToDoList</name>
     <description>To-Do List project created using Spring Boot</description>
 
@@ -55,7 +55,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>1.18.22</version>
         </dependency>
 
         <dependency>
